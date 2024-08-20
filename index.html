@@ -1,0 +1,781 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>東吳大學資訊管理系</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" />
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <style>
+        body {
+            margin: 0px;
+            font-family: "微軟正黑體";
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .navbar {
+            padding-top: 15px;
+        }
+
+            .navbar .container-fluid {
+                max-width: 1200px;
+                margin: auto;
+            }
+
+        .container-fluid {
+            padding-right: 0px;
+            padding-left: 0px;
+        }
+
+        @media only screen and (max-width: 1280px) {
+            .navbar .container-fluid {
+                padding-right: 15px;
+                padding-left: 15px;
+            }
+        }
+
+        .navbar-left {
+            margin-top: 20px;
+            max-width: 330px;
+        }
+
+            .navbar-left img {
+                max-width: 330px;
+            }
+
+        #myNavbar {
+            margin: auto;
+        }
+        /*縮小時的下拉選單圖示靠左*/
+        .navbar-toggle {
+            float: left;
+            margin-left: 10px;
+        }
+        /*縮小時的下拉選單圖示裡頭物件*/
+        .icon-bar {
+            background-color: #ffffff;
+        }
+        /*導覽列向下指標*/
+        .caret {
+            display: none;
+        }
+
+        a {
+            color: #000000;
+        }
+
+        li a:hover, .dropdown-menu li a:hover {
+            color: #63a61c;
+        }
+
+        li a:hover, .dropdown:hover .dropdown-toggle {
+            background-color: #ffffff;
+        }
+
+        .dropdown-menu {
+            border-style: solid;
+            border-top-color: #63a61c;
+            border-width: 3px 0px 0px 0px;
+        }
+
+            .dropdown-menu li a {
+                font-weight: bold;
+            }
+
+        ul {
+            list-style-type: none;
+        }
+
+        .share {
+            border-radius: 5px;
+            text-decoration: none;
+            margin: 20px 2px;
+        }
+
+            .share:hover {
+                border-radius: 5px;
+                transform: scale(1.2);
+                transition-duration: 0.2s;
+            }
+
+        .nav .share a {
+            padding: 0;
+            border-radius: 5px;
+        }
+
+        .email, .nav .email a:hover {
+            border-color: #63a61c;
+            background-color: #63a61c;
+        }
+
+        .facebook, .nav .facebook a:hover {
+            border-color: #3b5998;
+            background-color: #3b5998;
+        }
+
+        .youtube, .nav .youtube a:hover {
+            border-color: #e02927;
+            background-color: #e02927;
+        }
+        /*語言標籤*/
+        .lang {
+            margin: 25px 10px;
+        }
+        /*搜尋標籤*/
+        .search {
+            margin: 0;
+        }
+
+        .nav .lang a {
+            padding: 0;
+            color: #63a61c;
+        }
+
+            .nav .lang a:hover {
+                color: #000000;
+                background-color: #ffffff;
+            }
+
+        .item .carousel-caption {
+            height: 500px;
+            width: 30%;
+            background-color: #000000;
+            opacity: 0.5;
+            left: 0;
+            top: 0;
+        }
+
+        .main {
+            max-width: 1280px;
+            display: block;
+            margin: 0 auto;
+            background-color: #ffffff;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+        .slider div {
+            margin: 0px auto;
+            padding: 5px;
+            box-sizing: border-box;
+            text-align: center;
+            max-height: 367px;
+            overflow: hidden;
+        }
+
+        .slider.n1 div a {
+            display: inline-block;
+            background-color: #63a61c;
+            padding: 15px;
+            border-radius: 50px;
+            margin: 20px 0px;
+        }
+
+        .slider div h3 {
+            color: #63a61c;
+            font-size: 25px;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            text-align: center;
+        }
+
+        .slider div p {
+            margin-top: 10px;
+            text-align: justify;
+        }
+
+        .slider.n2 div {
+            border-radius: 5px;
+            font-weight: normal;
+        }
+
+            .slider.n2 div a {
+                display: inline-block;
+                border-radius: 5px;
+                margin: 10px 0px;
+                max-height: 174px;
+            }
+
+            .slider.n2 div img {
+                border-radius: 5px;
+            }
+
+        .date-block {
+            float: left;
+            display: inline-block;
+            background-color: #63a61c;
+            color: #ffffff;
+            border-radius: 5px;
+            width: 65px;
+            font-size: 11px;
+            box-sizing: border-box;
+            white-space: nowrap;
+        }
+
+            .date-block .day {
+                font-size: 30px;
+                display: block;
+            }
+
+        .slider.n2 div .text {
+            color: #63a61c;
+            text-align: justify;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $(".slider div").hover(function () {
+                $(this).children("a").css({ "transform": "scale(1.2)", "transition-duration": "0.2s" });
+                $(this).children("h3").css("color", "black");
+                $(this).children(".text").css("color", "black");
+            }, function () {
+                $(this).children("a").css({ "transform": "scale(1)", "transition-duration": "0.2s" });
+                $(this).children("h3").css("color", "#63a61c");
+                $(this).children(".text").css("color", "#63a61c");
+            });
+            $(".slider div a").hover(function () {
+                $(this).parent().next().children(".text").css("color", "black");
+            }, function () {
+                $(this).parent().next().children(".text").css("color", "#63a61c");
+            });
+            $('.slider-nav').slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                dots: true,
+                autoplay: true,
+                focusOnSelect: true
+            });
+            if ($(window).width() < 768) {
+                $(".navbar-left").hide();
+                $(".navbar-text").show();
+                $("#2ndnav").hide();
+                $(".navbar").css("background-color", "#63a61c");
+                /*$(".dropdown").unbind("mouseenter moesemove mouseleave")
+                $(".dropdown").mouseup(function () {
+                    $(this).children(".dropdown-menu").slideDown(2000);
+                });
+                $(".dropdown").focusout(function () {
+                    $(".dropdown-menu").fadeOut(0);
+                });*/
+            }
+            else {
+                $(".navbar-left").show();
+                $(".navbar-text").hide();
+                $("#2ndnav").show();
+                $(".navbar").css("background-color", "#ffffff");
+                $(".dropdown").hover(function () {
+                    $(this).children(".dropdown-menu").fadeIn(200);
+                });
+                $(".dropdown").mouseleave(function () {
+                    $(this).children(".dropdown-menu").hide();
+                });
+                $(".dropdown").focusout(function () {
+                    $(".dropdown-menu").hide();
+                });
+            }
+        })
+
+        $(window).resize(function () {
+            if ($(window).width() < 768) {
+                $(".navbar-left").hide();
+                $(".navbar-text").show();
+                $("#2ndnav").hide();
+                $(".navbar").css("background-color", "#63a61c");
+                /*$(".dropdown").unbind("mouseenter moesemove mouseleave")
+                $(".dropdown").mouseup(function () {
+                    $(this).children(".dropdown-menu").slideDown(2000);
+                });
+                $(".dropdown").focusout(function () {
+                    $(".dropdown-menu").slideup(1000);
+                });*/
+            }
+            else {
+                $(".navbar-left").show();
+                $(".navbar-text").hide();
+                $("#2ndnav").show();
+                $(".navbar").css("background-color", "#ffffff");
+                $(".dropdown").hover(function () {
+                    $(this).children(".dropdown-menu").fadeIn(400);
+                });
+                $(".dropdown").mouseleave(function () {
+                    $(this).children(".dropdown-menu").fadeOut(0);
+                });
+            }
+        })
+    </script>
+</head>
+<body>
+    <!--導覽列-->
+    <nav class="navbar">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-left" title="東吳大學資訊管理學系 Computer Science & Information Management, Soochow University" href="#"><img src="logo.png" border="0" /></a>
+                <p class="navbar-text" style="text-align:center;color:white">東吳大學資訊管理學系</p>
+            </div>
+            <ul class="nav navbar-nav pull-right" id="2ndnav">
+                <li class="share email">
+                    <a title="E-Mail" href="mailto:csim@scu.edu.tw"><img src="guide_email.png" border="0" /></a>
+                </li>
+                <li class="share facebook">
+                    <a title="Facebook" href="https://www.facebook.com/groups/423042061079940/"><img src="guide_facebook.png" border="0" /></a>
+                </li>
+                <li class="share youtube">
+                    <a title="Youtube" href="http://www.youtube.com/watch?v=awEJHxWr374"><img src="guide_youtube.png" border="0" /></a>
+                </li>
+                <li class="lang tw">
+                    <a title="繁體中文" href="#">繁體中文</a>
+                </li>
+                <li class="lang en">
+                    <a title="English" href="#">English</a>
+                </li>
+                <li class="search">
+                    <form class="navbar-form navbar-left">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search.." name="search">
+                            <div class="input-group-btn">
+                                <button class="btn btn-default" type="submit">
+                                    <i class="glyphicon glyphicon-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </li>
+            </ul>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">最新消息 <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="#">一般公告</a>
+                            </li>
+                            <li>
+                                <a href="#">演講公告</a>
+                            </li>
+                            <li>
+                                <a href="#">活動公告</a>
+                            </li>
+                            <li>
+                                <a href="#">榮譽榜</a>
+                            </li>
+                            <li>
+                                <a href="#">校園徵才</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">學系介紹 <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="#">學系介紹</a>
+                            </li>
+                            <li>
+                                <a href="#">學系沿革</a>
+                            </li>
+                            <li>
+                                <a href="#">發展目標與方向</a>
+                            </li>
+                            <li>
+                                <a href="#">教育目標與能力指標</a>
+                            </li>
+                            <li>
+                                <a href="#">畢業生未來發展</a>
+                            </li>
+                            <li>
+                                <a href="#">交通及聯絡資訊</a>
+                            </li>
+                            <li>
+                                <a href="#">相關法規</a>
+                            </li>
+                            <li>
+                                <a href="#">系委員會</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">師資介紹 <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="#">教師</a>
+                            </li>
+                            <li>
+                                <a href="#">助教</a>
+                            </li>
+                            <li>
+                                <a href="#">行政人員</a>
+                            </li>
+                            <li>
+                                <a href="#">退休教師</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">課程資訊 <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="#">課程資訊</a>
+                            </li>
+                            <li>
+                                <a href="#">學士班</a>
+                            </li>
+                            <li>
+                                <a href="#">碩士班</a>
+                            </li>
+                            <li>
+                                <a href="#">碩士在職專班</a>
+                            </li>
+                            <li>
+                                <a href="#">實習課程</a>
+                            </li>
+                            <li>
+                                <a href="#">專題實驗</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">教學設備 <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="#">教學設備</a>
+                            </li>
+                            <li>
+                                <a href="#">領域實驗室</a>
+                            </li>
+                            <li>
+                                <a href="#">資管專業教室</a>
+                            </li>
+                            <li>
+                                <a href="#">AR/VR Center</a>
+                            </li>
+                            <li>
+                                <a href="#">專題實驗教室</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">招生資訊 <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="#">學士班</a>
+                            </li>
+                            <li>
+                                <a href="#">碩士班</a>
+                            </li>
+                            <li>
+                                <a href="#">碩士在職專班</a>
+                            </li>
+                            <li>
+                                <a href="#">考古題</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">學生園地 <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="#">獎助學金</a>
+                            </li>
+                            <li>
+                                <a href="#">各班導師名冊</a>
+                            </li>
+                            <li>
+                                <a href="#">學會幹部名單</a>
+                            </li>
+                            <li>
+                                <a href="#">畢業生專題成果</a>
+                            </li>
+                            <li>
+                                <a href="#">生涯輔導</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">畢業生園地 <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="#">畢業生離校問卷</a>
+                            </li>
+                            <li>
+                                <a href="#">資管系慶</a>
+                            </li>
+                            <li>
+                                <a href="#">畢業生未來發展</a>
+                            </li>
+                            <li>
+                                <a href="#">傑出系友</a>
+                            </li>
+                            <li>
+                                <a href="#">定期小額募款專案</a>
+                            </li>
+                            <li>
+                                <a href="#">系友獎助學金點滴在心</a>
+                            </li>
+                            <li>
+                                <a href="#">資管系電子報</a>
+                            </li>
+                            <li>
+                                <a href="#">東吳資管/資科/電算系友會FB</a>
+                            </li>
+                            <li>
+                                <a href="#">台灣東吳資訊系友協會</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">相關連結 <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="#">東吳大學</a>
+                            </li>
+                            <li>
+                                <a href="#">東吳大學商學院</a>
+                            </li>
+                            <li>
+                                <a href="#">定期小額募款專案</a>
+                            </li>
+                            <li>
+                                <a href="#">會議室預約系統</a>
+                            </li>
+                            <li>
+                                <a href="#">程式檢定查詢(限教師)</a>
+                            </li>
+                            <li>
+                                <a href="#">資管系電子報</a>
+                            </li>
+                            <li>
+                                <a href="#">程式檢定歷屆試題</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--輪播區-->
+    <div class="container-fluid">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!--圓圈遞移圖示-->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+
+            <!--輪播圖片-->
+            <div class="carousel-inner">
+                <div class="item active" style="top:0px;left:0px;width:100%;height:500px">
+                    <a href="#" style="display: block;background-image:url('_Blank ERD & Data Flow8.png');background-repeat: no-repeat;background-size: cover;top:0px;left:0px;width:100%;height:500px"></a>
+                    <div class="carousel-caption">
+                        <h3 style="margin-top:200px">Los Angeles</h3>
+                        <p>LA is always so much fun!</p>
+                    </div>
+                </div>
+                <div class="item" style="top:0px;left:0px;width:100%;height:500px">
+                    <a href="#" style="display: block;background-image:url('_Blank ERD & Data Flow8.png');background-repeat: no-repeat;background-size: cover;top:0px;left:0px;width:100%;height:500px"></a>
+                    <div class="carousel-caption">
+                        <h3 style="margin-top:200px">Chicago</h3>
+                        <p>Thank you, Chicago!</p>
+                    </div>
+                </div>
+                <div class="item" style="top:0px;left:0px;width:100%;height:500px">
+                    <a href="#" style="display: block;background-image:url('_Blank ERD & Data Flow8.png');background-repeat: no-repeat;background-size: cover;top:0px;left:0px;width:100%;height:500px"></a>
+                    <div class="carousel-caption">
+                        <h3 style="margin-top:200px">New York</h3>
+                        <p>We love the Big Apple!</p>
+                    </div>
+                </div>
+            </div>
+
+            <!--左右邊換張圖示-->
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+    <!--區塊區-->
+    <div class="container">
+        <div class="main">
+            <div class="slider slider-nav n1">
+                <div>
+                    <a href="mailto:csim@scu.edu.tw"><img src="scholarship.png" style="width:60px;text-align: center" border="0" /></a>
+                    <h3>獎學金</h3>
+                    <p>
+                        熱心系友捐贈了專供本系學生申請的獎學金，計有張楚義系友清寒獎助學金、賴宗羲系友獎助學金、資管系系友獎助學金等。
+                    </p>
+                </div>
+                <div>
+                    <a href="mailto:csim@scu.edu.tw"><img src="welcomefrom_highschool.png" style="width:60px;text-align: center" border="0" /></a>
+                    <h3>歡迎畢業高中生</h3>
+                    <p>
+                        熱烈歡迎高中畢業生至本系就讀。本系成立至今已四十餘年，畢業生表現傑出，不論在學生實作能力、學生就業能力及教師專業能力等，各項指標均領先全國私立大學資管系。詳見系所簡介、系所近況及入學新生Q&A！！
+                    </p>
+                </div>
+                <div>
+                    <a href="mailto:csim@scu.edu.tw"><img src="courseInfo.png" style="width:60px;text-align: center" border="0" /></a>
+                    <h3>課程資訊</h3>
+                    <p>
+                        學士班規劃了四個特色課程學群：企業電子化、網路與資料庫應用、多媒體與行動應用、軟體開發與管理。學生可依興趣與未來發展，有系統的學習。並規劃一學年「專題實驗」總結性課程，統整四年所學的專業知識於實務應用上，以縮短學用落差，增進職場競爭力。
+                    </p>
+                </div>
+                <div>
+                    <a href="mailto:csim@scu.edu.tw"><img src="equipment-lectured.png" style="width:60px;text-align: center" border="0" /></a>
+                    <h3>教學設備</h3>
+                    <p>
+                        本系有專屬之一般電腦教室兩間、 兩間專題實驗教室、 一間資管專業教室、一間認證輔導教室，提供80部高階電腦，供本系學生使用。此外本系有三大間碩士班領域實驗室：企業電子化實驗室、網路與資料庫實驗室和多媒體與行動應用實驗室，供同學研究使用。
+                    </p>
+                </div>
+                <div>
+                    <a href="mailto:csim@scu.edu.tw"><img src="graduateFuture.png" style="width:60px;text-align: center" border="0" /></a>
+                    <h3>畢業生未來發展</h3>
+                    <p>
+                        國內工商業生產結構已從勞力密集轉向腦力密集的時代，而現代化工商業競爭優勢的形成極為仰賴先進的資訊處理與創新的科技應用。根據經建會之報告指出，資訊人才的需求量將急速增加，前途相當看好。 104人力銀行統計，本系畢業生薪資高於全國私立大學資管系！
+                    </p>
+                </div>
+            </div>
+            <div class="slider slider-nav n2">
+                <div>
+                    <div>
+                        <a href="mailto:csim@scu.edu.tw"><img src="n2-01.png" border="0" /></a>
+                    </div>
+                    <div>
+                        <div class="date-block">
+                            <span class="day">16</span>
+                            <span>Nov 2018</span>
+                        </div>
+                        <div class="text">賀！2018大專校院資訊應用服務創新競賽榮獲佳績！</div>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <a href="mailto:csim@scu.edu.tw"><img src="n2-02.png" border="0" /></a>
+                    </div>
+                    <div>
+                        <div class="date-block">
+                            <span class="day">7</span>
+                            <span>Nov 2018</span>
+                        </div>
+                        <div class="text">賀！鄭麗珍老師榮獲106學年度熱心導師！</div>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <a href="mailto:csim@scu.edu.tw"><img src="n2-03.png" border="0" /></a>
+                    </div>
+                    <div>
+                        <div class="date-block">
+                            <span class="day">7</span>
+                            <span>Nov 2018</span>
+                        </div>
+                        <div class="text">賀！朱蕙君老師榮獲106學年度熱心導師！</div>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <a href="mailto:csim@scu.edu.tw"><img src="n2-04.png" border="0" /></a>
+                    </div>
+                    <div>
+                        <div class="date-block">
+                            <span class="day">8</span>
+                            <span>Oct 2018</span>
+                        </div>
+                        <div class="text">賀！林娟娟老師獲聘特聘教授！</div>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <a href="mailto:csim@scu.edu.tw"><img src="n2-05.png" border="0" /></a>
+                    </div>
+                    <div>
+                        <div class="date-block">
+                            <span class="day">22</span>
+                            <span>Jun 2018</span>
+                        </div>
+                        <div class="text">賀！黃日鉦老師榮升教授！</div>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <a href="mailto:csim@scu.edu.tw"><img src="n2-06.png" border="0" /></a>
+                    </div>
+                    <div>
+                        <div class="date-block">
+                            <span class="day">10</span>
+                            <span>May 2018</span>
+                        </div>
+                        <div class="text">賀！本系朱蕙君老師入選全球百大翻轉教師</div>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <a href="mailto:csim@scu.edu.tw"><img src="n2-07.jpg" border="0" /></a>
+                    </div>
+                    <div>
+                        <div class="date-block">
+                            <span class="day">3</span>
+                            <span>May 2018</span>
+                        </div>
+                        <div class="text">賀本系資三B詹昕瑜同學榮獲107年全國大專校院運動會一般女子組五十公尺蝶式冠軍！</div>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <a href="mailto:csim@scu.edu.tw"><img src="n2-08.png" border="0" /></a>
+                    </div>
+                    <div>
+                        <div class="date-block">
+                            <span class="day">28</span>
+                            <span>Nov 2017</span>
+                        </div>
+                        <div class="text">賀！黃心怡老師榮獲105學年度熱心導師！</div>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <a href="mailto:csim@scu.edu.tw"><img src="n2-09.png" border="0" /></a>
+                    </div>
+                    <div>
+                        <div class="date-block">
+                            <span class="day">28</span>
+                            <span>Nov 2017</span>
+                        </div>
+                        <div class="text">賀！鄭麗珍老師榮獲105學年度熱心導師！</div>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <a href="mailto:csim@scu.edu.tw"><img src="n2-10.png" border="0" /></a>
+                    </div>
+                    <div>
+                        <div class="date-block">
+                            <span class="day">22</span>
+                            <span>Nov 2017</span>
+                        </div>
+                        <div class="text">賀！柯淑津老師榮獲105學年度績優老師</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
