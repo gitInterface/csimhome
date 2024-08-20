@@ -1,15 +1,19 @@
 ﻿<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
     <meta charset="utf-8" />
     <title>東吳大學資訊管理系</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" />
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" />
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
     <style>
         body {
             margin: 0px;
@@ -26,10 +30,10 @@
             padding-top: 15px;
         }
 
-            .navbar .container-fluid {
-                max-width: 1200px;
-                margin: auto;
-            }
+        .navbar .container-fluid {
+            max-width: 1200px;
+            margin: auto;
+        }
 
         .container-fluid {
             padding-right: 0px;
@@ -48,22 +52,25 @@
             max-width: 330px;
         }
 
-            .navbar-left img {
-                max-width: 330px;
-            }
+        .navbar-left img {
+            max-width: 330px;
+        }
 
         #myNavbar {
             margin: auto;
         }
+
         /*縮小時的下拉選單圖示靠左*/
         .navbar-toggle {
             float: left;
             margin-left: 10px;
         }
+
         /*縮小時的下拉選單圖示裡頭物件*/
         .icon-bar {
             background-color: #ffffff;
         }
+
         /*導覽列向下指標*/
         .caret {
             display: none;
@@ -73,11 +80,13 @@
             color: #000000;
         }
 
-        li a:hover, .dropdown-menu li a:hover {
+        li a:hover,
+        .dropdown-menu li a:hover {
             color: #63a61c;
         }
 
-        li a:hover, .dropdown:hover .dropdown-toggle {
+        li a:hover,
+        .dropdown:hover .dropdown-toggle {
             background-color: #ffffff;
         }
 
@@ -87,9 +96,9 @@
             border-width: 3px 0px 0px 0px;
         }
 
-            .dropdown-menu li a {
-                font-weight: bold;
-            }
+        .dropdown-menu li a {
+            font-weight: bold;
+        }
 
         ul {
             list-style-type: none;
@@ -101,35 +110,40 @@
             margin: 20px 2px;
         }
 
-            .share:hover {
-                border-radius: 5px;
-                transform: scale(1.2);
-                transition-duration: 0.2s;
-            }
+        .share:hover {
+            border-radius: 5px;
+            transform: scale(1.2);
+            transition-duration: 0.2s;
+        }
 
         .nav .share a {
             padding: 0;
             border-radius: 5px;
         }
 
-        .email, .nav .email a:hover {
+        .email,
+        .nav .email a:hover {
             border-color: #63a61c;
             background-color: #63a61c;
         }
 
-        .facebook, .nav .facebook a:hover {
+        .facebook,
+        .nav .facebook a:hover {
             border-color: #3b5998;
             background-color: #3b5998;
         }
 
-        .youtube, .nav .youtube a:hover {
+        .youtube,
+        .nav .youtube a:hover {
             border-color: #e02927;
             background-color: #e02927;
         }
+
         /*語言標籤*/
         .lang {
             margin: 25px 10px;
         }
+
         /*搜尋標籤*/
         .search {
             margin: 0;
@@ -140,10 +154,10 @@
             color: #63a61c;
         }
 
-            .nav .lang a:hover {
-                color: #000000;
-                background-color: #ffffff;
-            }
+        .nav .lang a:hover {
+            color: #000000;
+            background-color: #ffffff;
+        }
 
         .item .carousel-caption {
             height: 500px;
@@ -199,16 +213,16 @@
             font-weight: normal;
         }
 
-            .slider.n2 div a {
-                display: inline-block;
-                border-radius: 5px;
-                margin: 10px 0px;
-                max-height: 174px;
-            }
+        .slider.n2 div a {
+            display: inline-block;
+            border-radius: 5px;
+            margin: 10px 0px;
+            max-height: 174px;
+        }
 
-            .slider.n2 div img {
-                border-radius: 5px;
-            }
+        .slider.n2 div img {
+            border-radius: 5px;
+        }
 
         .date-block {
             float: left;
@@ -222,10 +236,10 @@
             white-space: nowrap;
         }
 
-            .date-block .day {
-                font-size: 30px;
-                display: block;
-            }
+        .date-block .day {
+            font-size: 30px;
+            display: block;
+        }
 
         .slider.n2 div .text {
             color: #63a61c;
@@ -314,6 +328,7 @@
         })
     </script>
 </head>
+
 <body>
     <!--導覽列-->
     <nav class="navbar">
@@ -324,7 +339,8 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-left" title="東吳大學資訊管理學系 Computer Science & Information Management, Soochow University" href="#"><img src="logo.png" border="0" /></a>
+                <a class="navbar-left" title="東吳大學資訊管理學系 Computer Science & Information Management, Soochow University"
+                    href="#"><img src="logo.png" border="0" /></a>
                 <p class="navbar-text" style="text-align:center;color:white">東吳大學資訊管理學系</p>
             </div>
             <ul class="nav navbar-nav pull-right" id="2ndnav">
@@ -332,10 +348,12 @@
                     <a title="E-Mail" href="mailto:csim@scu.edu.tw"><img src="guide_email.png" border="0" /></a>
                 </li>
                 <li class="share facebook">
-                    <a title="Facebook" href="https://www.facebook.com/groups/423042061079940/"><img src="guide_facebook.png" border="0" /></a>
+                    <a title="Facebook" href="https://www.facebook.com/groups/423042061079940/"><img
+                            src="guide_facebook.png" border="0" /></a>
                 </li>
                 <li class="share youtube">
-                    <a title="Youtube" href="http://www.youtube.com/watch?v=awEJHxWr374"><img src="guide_youtube.png" border="0" /></a>
+                    <a title="Youtube" href="http://www.youtube.com/watch?v=awEJHxWr374"><img src="guide_youtube.png"
+                            border="0" /></a>
                 </li>
                 <li class="lang tw">
                     <a title="繁體中文" href="#">繁體中文</a>
@@ -579,21 +597,24 @@
             <!--輪播圖片-->
             <div class="carousel-inner">
                 <div class="item active" style="top:0px;left:0px;width:100%;height:500px">
-                    <a href="#" style="display: block;background-image:url('_Blank ERD & Data Flow8.png');background-repeat: no-repeat;background-size: cover;top:0px;left:0px;width:100%;height:500px"></a>
+                    <a href="#"
+                        style="display: block;background-image:url('_Blank ERD & Data Flow8.png');background-repeat: no-repeat;background-size: cover;top:0px;left:0px;width:100%;height:500px"></a>
                     <div class="carousel-caption">
                         <h3 style="margin-top:200px">Los Angeles</h3>
                         <p>LA is always so much fun!</p>
                     </div>
                 </div>
                 <div class="item" style="top:0px;left:0px;width:100%;height:500px">
-                    <a href="#" style="display: block;background-image:url('_Blank ERD & Data Flow8.png');background-repeat: no-repeat;background-size: cover;top:0px;left:0px;width:100%;height:500px"></a>
+                    <a href="#"
+                        style="display: block;background-image:url('_Blank ERD & Data Flow8.png');background-repeat: no-repeat;background-size: cover;top:0px;left:0px;width:100%;height:500px"></a>
                     <div class="carousel-caption">
                         <h3 style="margin-top:200px">Chicago</h3>
                         <p>Thank you, Chicago!</p>
                     </div>
                 </div>
                 <div class="item" style="top:0px;left:0px;width:100%;height:500px">
-                    <a href="#" style="display: block;background-image:url('_Blank ERD & Data Flow8.png');background-repeat: no-repeat;background-size: cover;top:0px;left:0px;width:100%;height:500px"></a>
+                    <a href="#"
+                        style="display: block;background-image:url('_Blank ERD & Data Flow8.png');background-repeat: no-repeat;background-size: cover;top:0px;left:0px;width:100%;height:500px"></a>
                     <div class="carousel-caption">
                         <h3 style="margin-top:200px">New York</h3>
                         <p>We love the Big Apple!</p>
@@ -617,38 +638,45 @@
         <div class="main">
             <div class="slider slider-nav n1">
                 <div>
-                    <a href="mailto:csim@scu.edu.tw"><img src="scholarship.png" style="width:60px;text-align: center" border="0" /></a>
+                    <a href="mailto:csim@scu.edu.tw"><img src="scholarship.png" style="width:60px;text-align: center"
+                            border="0" /></a>
                     <h3>獎學金</h3>
                     <p>
                         熱心系友捐贈了專供本系學生申請的獎學金，計有張楚義系友清寒獎助學金、賴宗羲系友獎助學金、資管系系友獎助學金等。
                     </p>
                 </div>
                 <div>
-                    <a href="mailto:csim@scu.edu.tw"><img src="welcomefrom_highschool.png" style="width:60px;text-align: center" border="0" /></a>
+                    <a href="mailto:csim@scu.edu.tw"><img src="welcomefrom_highschool.png"
+                            style="width:60px;text-align: center" border="0" /></a>
                     <h3>歡迎畢業高中生</h3>
                     <p>
                         熱烈歡迎高中畢業生至本系就讀。本系成立至今已四十餘年，畢業生表現傑出，不論在學生實作能力、學生就業能力及教師專業能力等，各項指標均領先全國私立大學資管系。詳見系所簡介、系所近況及入學新生Q&A！！
                     </p>
                 </div>
                 <div>
-                    <a href="mailto:csim@scu.edu.tw"><img src="courseInfo.png" style="width:60px;text-align: center" border="0" /></a>
+                    <a href="mailto:csim@scu.edu.tw"><img src="courseInfo.png" style="width:60px;text-align: center"
+                            border="0" /></a>
                     <h3>課程資訊</h3>
                     <p>
                         學士班規劃了四個特色課程學群：企業電子化、網路與資料庫應用、多媒體與行動應用、軟體開發與管理。學生可依興趣與未來發展，有系統的學習。並規劃一學年「專題實驗」總結性課程，統整四年所學的專業知識於實務應用上，以縮短學用落差，增進職場競爭力。
                     </p>
                 </div>
                 <div>
-                    <a href="mailto:csim@scu.edu.tw"><img src="equipment-lectured.png" style="width:60px;text-align: center" border="0" /></a>
+                    <a href="mailto:csim@scu.edu.tw"><img src="equipment-lectured.png"
+                            style="width:60px;text-align: center" border="0" /></a>
                     <h3>教學設備</h3>
                     <p>
-                        本系有專屬之一般電腦教室兩間、 兩間專題實驗教室、 一間資管專業教室、一間認證輔導教室，提供80部高階電腦，供本系學生使用。此外本系有三大間碩士班領域實驗室：企業電子化實驗室、網路與資料庫實驗室和多媒體與行動應用實驗室，供同學研究使用。
+                        本系有專屬之一般電腦教室兩間、 兩間專題實驗教室、
+                        一間資管專業教室、一間認證輔導教室，提供80部高階電腦，供本系學生使用。此外本系有三大間碩士班領域實驗室：企業電子化實驗室、網路與資料庫實驗室和多媒體與行動應用實驗室，供同學研究使用。
                     </p>
                 </div>
                 <div>
-                    <a href="mailto:csim@scu.edu.tw"><img src="graduateFuture.png" style="width:60px;text-align: center" border="0" /></a>
+                    <a href="mailto:csim@scu.edu.tw"><img src="graduateFuture.png" style="width:60px;text-align: center"
+                            border="0" /></a>
                     <h3>畢業生未來發展</h3>
                     <p>
-                        國內工商業生產結構已從勞力密集轉向腦力密集的時代，而現代化工商業競爭優勢的形成極為仰賴先進的資訊處理與創新的科技應用。根據經建會之報告指出，資訊人才的需求量將急速增加，前途相當看好。 104人力銀行統計，本系畢業生薪資高於全國私立大學資管系！
+                        國內工商業生產結構已從勞力密集轉向腦力密集的時代，而現代化工商業競爭優勢的形成極為仰賴先進的資訊處理與創新的科技應用。根據經建會之報告指出，資訊人才的需求量將急速增加，前途相當看好。
+                        104人力銀行統計，本系畢業生薪資高於全國私立大學資管系！
                     </p>
                 </div>
             </div>
@@ -778,4 +806,5 @@
     </div>
 
 </body>
+
 </html>
